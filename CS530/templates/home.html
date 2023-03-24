@@ -1,0 +1,115 @@
+{% extends 'base.html' %}
+
+{% set active = "Home" %}
+
+{% block header %}
+    
+    <link rel="stylesheet" href="../static/css/home.css">
+    
+    
+    <style>
+        body {
+            background-image: url(https://img.zmtc.com/2019/0815/20190815113424322.jpg);
+            color: black;
+            background-repeat: no-repeat;
+            background-attachment: fixed;  
+            background-size: cover;
+        }
+    </style>
+{% endblock %}
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block content %}
+
+    <div class="d-flex justify-content-end mb-3">
+        {% if current_user.is_authenticated %}
+
+        {% endif %}
+    </div>
+
+
+    <div class="col1">
+        <h1 style="font-weight: bold; font-size: 70px; color: white; ">Welcome</h1>
+        <div id="clock" class="textT" onload="updateTime()"></div>
+            
+        <div class="textP">“When one door of happiness closes, another opens; but often we look so long at the closed door that we do not see the one which has been opened for us.”</div>
+
+    </div>
+        
+
+
+
+
+
+    <div class="col2">
+        <div class="taskT" style="color:white;">My Tasks</div>
+
+        <section class="container">
+            <div class="list-column">
+
+                <div class="listMT">
+                    <div class="taskMT">To Do</div>
+                </div>
+
+                <div class="listMT">
+                    <div class="taskMT">In Progress</div>
+                </div>
+
+                <div class="listMT">
+                    <div class="taskMT">Done</div>
+                </div>
+
+            </div>
+        </section>                
+        
+        <section class="container">
+            <div class="list-column">
+
+                <div class="list">
+                    <div id="task-listT" style="color: white;"></div>
+                </div>
+
+                <div class="list">
+                    <div id="task-listI" style="color: white;"></div>
+                </div>
+
+                <div class="list">
+                    <div id="task-listD" style="color: white;"></div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+   
+
+
+      
+    <div class="col3">         
+        <div class="taskT" style="color:white;">My Notes</div>
+            <section class="container">
+                <div class="list-column">
+                    <div class="listN">                
+                        <div id="note-list"></div>
+        
+                    </div>
+
+                </div>
+            </section>
+        </div>
+
+
+    <div class="listDD">
+        <body onload="drawCalendar()" >      
+               
+            <canvas id="calendar" width="600" height="400" style="color:white;"></canvas>
+
+
+        </body>   
+            
+    </div>
+
+
+{% endblock %}
