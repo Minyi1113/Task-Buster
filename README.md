@@ -39,4 +39,3 @@ If you want to access the application through the provided public IP address, op
 ![eb896c6b60fc3ad31f171ea65d3dfe8](https://user-images.githubusercontent.com/56332687/230015750-01443321-80ff-4bfb-9c3e-1fd38054a014.png)
 
 
-
