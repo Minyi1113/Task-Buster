@@ -1,0 +1,493 @@
+my our next speaker doesn't i don't think needs an introduction but i first heard of him uh in high school i was reading a book called where the wizards stay up late the history of the internet if you've not read it it's a fantastic overview of just all of the early days of the internet how things came together at various at various institutions to build what we now most of us run our careers on today everything from how this conference was organized to what we did through the pandemic to how i get cat litter through the mail all organized and coordinated over to cpip i don't know if dr serp had that in mind when he did it but uh that was interesting so um so yeah we're super excited the other thing that the interesting piece here is dr cerf did this while he was at ucla and for those of you that don't know when scale started 20 years ago that was done by students at ucla and usc and ucsb and csun and a few other local schools when we were all just but we we children in our freshman and sophomore years of college thinking that running conferences would be easy one thing i can tell you it is it is that after 20 years the only thing i have  learned is that it is not easy but but yes so um we're super excited to have dr surf and one of the things that has been a pleasure for me over the last 20 years is just getting to meet my um my my and my internet and sort of cs heroes as we bring them as we bring them on stage here for keynotes and further activities and so without further ado i give you i give you dr surf who's joining us all the way from virginia and appreciate appreciate him making the time uh as well as and for joining us so thank you dr sir well thank you all very much you know when people clap before you said anything my first reaction is to sit down because it won't get any better than that now you all i clearly understand the tactic that's been employed here uh you wait until the last session of the four days of grueling fantastic i looked at the at the list of sessions holy moly you guys have got an enormous amount of useful information and i'm sure in the corridors in between lots of other very useful ideas been flying back and forth so what you do on the last day is you get the talking dinosaur to come out and and and it doesn't matter what the dinosaur says the fact that he can still talk is amazing
+so i i was i think i i've been given a a few uh suggestions though about things to talk about and i understand that when you get to be my age you tell anecdotes and so so we're gonna go uh and look into the past and look at a few anecdotes and i see more than a few gray hairs in the audience which means yeah i don't have any left but my beard is doing okay uh so for some of you this will be i hope a kind of a fun reminiscence of things past that have taken us to where we are today and where we are today is a big challenge and i'll try to close my talk with some thoughts about things that we might collectively do to meet some of those challenges and what i find
+most appealing i think about you in particular is that you've been doing this conference now for 20 years and there is this fellow feeling of a collaborative sense of responsibility that you bring to the table that i wish everyone who writes software would bring to the table so we're going to come to to that in the last few thoughts of this talk but let me start out by jumping into the time machine for a second and take you back to 1969 at ucla not very far away there were four nodes by the end of december 1969 in operation at these four locations which were selected by the defense advanced research projects agency for particular reasons ucla was selected as the first node because len kleinrock who is still a professor at ucla ran the network measurement center and my job as a graduate student there was to write software for the sigma 7 machine to measure the performance of the arpanet and compare with the cueing theoretic models that len kleinrock students were developing so we could compare what the predictions were from the queuing theory models and see what actually came out from the measurements and i can tell you that the cueing theoretic models were always you know beautiful and mathematical and pristine and everything else but they didn't always predict what actually happened in a real network and i suspect that every one of you knows exactly why that's the case so ucla is network measurement center then sri international is the second node [Laughter]
+and that was because doug engelbart was at the augmentation research center at sri international his belief and uh and the belief of jcr lick glider who was the who was running the information processing techniques office of darpa believed that computers could be a way of augmenting our capabilities and i would say that they were right our our capabilities today what we do every single day are often augmented by the kinds of software that you write and other people write to help us do things that we couldn't do on our own not least it would for example searching the entire world wide web so that was the second node uh and the third one was ucsb because they were doing some really interesting work on the presentation of uh complex functions in a on a on a screen so you could see what the computations were producing and finally university of utah because they were very much involved in computer graphics at the time now you can imagine computer graphics in 1969 are not like what they are today but one of the guys at utah invented one of the first hidden line removal algorithms so if you were doing 3d rendering and you wanted to show what it looked like what the surface looked like he had to remove the parts that couldn't be seen so he found it was john warnock whom some of you will know started a famous company called adobe some years later so that's 16 1969 many years ago and this is a picture that was taken in 1994 it was the 25th anniversary of the arpanet on the left you see john postel who sadly passed away in 1998 in the middle of steve crocker who led the network working group that did all of the host to host protocols the telnet protocols the ftp and eventually smtp for email he so he was the leader of that group and he was at ucla as was john postel all three of us went to the same high school van nuys high up in the san fernando valley i don't know must have been something in the air but um but we we became good friends at ucla as graduate students it took us all day to organize this shoot for newsweek magazine because we had to draw all those pictures with the backdrop hanging there then we had to go find the zucchinis and the yellow squash and the five five pound tins of coffee and then string it all together now this is newsweek magazine 1994 and we thought we would put up a geek joke for those who understood it so if you look carefully at this network you notice that it's mouth to mouth and ear to ear but there's no mouth to ear this network would never work so that was our little geek joke in 1994 but we were celebrating the uh that uh anniversary of the arpanet because without it we would not have even bothered to do the internet so now i'm going to skip very very fast forward here uh past the original early designs of tcp and then later tcpip this was a demonstration that i called for after i moved to virginia in 1976 to run the internet program for the defense department and i wanted very very much to show that the tcpip protocols could really work across different kinds of networks over considerable distances so we had a mobile packet radio network in the san francisco bay area driving up up and down 101 radiating packets like crazy through a gateway which had been configured to send those packets all the way across the arpanet which by that time extended into europe over an internal satellite from etam west virginia to tunnel in sweden and then a landline to norway to the norwegian defense research establishment and another landline down to university college london and then popped out of the arpanet at that point into another gateway that led to the atlantic packet satellite net which was based on intelsat 4a hanging over the atlantic with multiple ground stations all vying for access to one single satellite channel so it's like having an ethernet channel in the sky and then through the packet packet satellite network to etam west virginia down to another ground station back into the arpanet all the way across the u.s again to usc information sciences institute so if you do the math of course going from the roving vehicle in san francisco down to marina del rey is about 400 miles but the packets had gone through two synchronous satellite hops back and forth so it's about a hundred thousand miles and i remember when we did it and it worked i was jumping around in my office saying it works it works you know like it couldn't possibly have worked listen if it's you know you know that if it works if software works it's a miracle so so so that was a really important demonstration from my point of view as the program manager for this now we'll skip forward now we're in in the early and mid 1980s after the arpanet and the and those three network demonstration was done and further standardization was done then we implemented the tcp ip protocols on every operating system we could get our hands on in 1982 john postel announced that we are going to switch over from the ncp host to host protocols of the arpanet to the tcp ip protocols of the internet on january 1 1983 so this is january of 82 we make this announcement and everybody um sort of rumbles a bit you know you know everything seems to be working okay with the host host protocols and hellnet and so on so why do we have to do that we say well you know if you don't do that i won't fund your program next year oh oh okay i get
+that so i had dan lynch whom some of you know is the founder of interop was measuring how many implementations of tcpip could detect on the arpanet and so he would report to me you know once every couple of weeks and i could see that you know the curve was going up and then somewhere around the summertime it flattens out so you know i'm a bureaucrat at this point so what do you do well you clearly create incentives so i called the defense communications agency it's now called disa and i said will you shut off the capability of the arpanet to carry anything except tcpip they could do that turns out there was a way to do that and they said turn it off for a day so they did of course the phone was ringing off the hook what's the matter with you you blankety blankety bunny you know i can't can't get any email you know files don't worry and i said i just want you to know i can do that [Applause] so yeah oh okay so curve starts going up again then somewhere around late the summer it's you know october or something it flattens out again so i called dca turned it off for two days phone rings off the hook everybody made it on january 1 1983 except for two guys and they pleaded you know for some kind of mercy and we said okay we'll give you another month or two so everybody made it up now how many everybody's were there there were only 400 computers on the internet at that point 400 as opposed to 400 million or whatever their numbers are today if you include the iot devices and the mobiles were into the multiple billions so now so it's now 1983 nsf is starting to invest in internet technology for hooking computer science departments up to the arpanet and then to the nsf network backbone and they quickly run out of gas they
+essentially sent out an rfp asking for a higher speed network now remember the
+backbone speeds of the arpanet were 50 kilobits a second okay that was that was broadband in
+1969. so nsfnet launches with 50 kilobits and and basically runs out of gas it
+switches to 1.5 megabits and last for a little while and then it switches to
+higher speeds and we just kept going you know eventually we end up in the multi-gigabit range so nsf makes this
+big investment they build a backbone network they build about a dozen intermediate level networks to serve
+about three thousand universities the purpose for which is to help those universities get access to the five
+supercomputer centers that nsf and the department of energy are investing in
+so the nsf net comes up and the supercomputer centers come up and not long thereafter nasa and the
+department of energy say this looks like a good thing so doe builds the esnet
+backbone and nasa builds the nsi or nasa science internet backbone so during the
+mid to late 1980s we're starting to see substantial implementation of course if
+we go to look at the internet today now some of you will know i'm cheating right because this picture was actually
+generated from the bgp backbone back in 1999 but it was so colorful that i
+thought it would keep it because it lets me illustrate something that you know and that is that the internet is very
+dispersed and there are literally tens of thousands if not more networks running each operator picks hardware and
+software to run decides who to connect to and on what terms and conditions there were no
+central decisions about your business model who you connected with the only thing we asked of everybody is please
+run the same protocols so that you could interoperate we wanted to encourage bob khan and i to
+encourage people to build pieces of internet find someone to connect to and let the system grow
+so that's what it looks like today except bigger and more colorful it is
+true that there is only one centralization element and that is trying to coordinate ip address
+allocation and domain name assignment so that they're unique and that's pretty important but icann doesn't dictate what
+is done with those things it just tries to make sure that if you want a domain name that it's
+assigned uniquely to one organization or an ip address block to an autonomous
+system so this is just my little memory of
+milestones i'm sure that every one of you who's been engaged in this game have your own favorite milestone so by no
+means should you take this as the definitive list of important milestones they're just the ones that i happen to
+remember one very important one comes after the internet goes operational in
+93 and cisco systems figures out that they can make money by selling routers
+to universities that want to get hooked up to the net and put local area networks in place oh by the way i did
+leave out something important 1973 bob khan comes to visit me in my uh office
+at stanford and says we have a problem and then what do you mean we and he says
+and he says well the arpanet worked and now the defense department wants to see if he can use computers in command and
+control but he right away realizes if you want to do that the computers are going to be in mobile vehicles and ships at sea and
+airplanes and the arpanet was built out of dedicated telephone lines connecting everything together well you can't
+connect the ships together that way because they get all tangled up the tanks run over the tanks run over the wires and they
+break and the airplanes never make it off the ground so he was already starting to work on
+the packet radio net and the packet satellite net at the time that we met so we started working on
+the tcp design about a mile or two away bob metcalf and david boggs are busy
+inventing ethernet at xerox park so that was the fourth packet switching technology that was born during this
+1970s early 1970s period so
+cisco is the first to start commercializing this stuff the way we used to build routers was to find a
+computer and a graduate student and you wrap the graduate student around the computer and turn it into a router
+the problem with that is we were running out of graduate students so cisco figures that out
+also in 84 it becomes very clear that this thing is scaling up and that we
+can't go keep sending the host.txt file around to map the domain names into ip addresses
+so we needed something that was more scalable so paul maca petrus and john pastel invent dns and it evolves over
+time but it certainly has scaled dramatically it's a pretty brilliant piece of work
+so around 1988 um by this time uh dan lynch is doing
+interop and uh it's up in the san francisco bay area
+and i walk in in 1988 he started in 86
+this small thing you know it was mostly lectures but then it was an exhibit oh and the deal was you can't exhibit
+unless you show that you can interwork with everybody else so they bring out the show net this big fat yellow coaxial
+cable you all had to plug into it and then show that you could talk to everybody else in the show
+so uh eric benimo who is then the ceo of
+3com the company that bob mccall started to sell ethernet
+and i walked into the show and the first thing we encounter is a two-story cisco thing you know display
+and so i turned to eric and i said eric how much do those displays cost and he says about
+000 this is 1988 and i'm sort of sitting here and saying that's a lot of money
+and he said that doesn't count the people who had to stay there and man the booth for duke for a week
+and so i'm just standing there and my jaw is dropping thinking somebody thinks they can make money out of the internet
+that's amazing so so um at at this point i'm starting to wonder
+because you know how are we going to let the rest of the the general population get
+access to this thing because up until that time all the networks were funded by the uh
+government agencies nasa disa and have too well yeah this it wasn't all so nasa
+nsf uh doe and what do i think is darpa
+so there was an appropriate use policy that said no commercial traffic will flow on a government-sponsored backbone and you
+could imagine the rationale for that they didn't want government resources to support commercial activity but it
+became increasingly clear that even the people who were doing research under government grant actually
+needed access to commercial services that could be reached on the internet if
+the if it were permitted so at this point i'm working with bob khan and his company the corporation for
+national research initiatives and i had taken a little break from the internet from roughly 82 to 86 to build
+something called mci mail which is a commercial email service so in 88 i'm sitting here thinking okay so what could
+i say to the federal government that would let me break the appropriate use
+policy without really appearing to want to do that
+so i called the federal networking council which at the time was mostly nasa darpa
+nsf uh and uh valley vap nasa darpa nsf
+and d.o.e uh their their program managers were the people who managed the internet policy
+so i called them and i said uh would it be okay if i tried to connect the mci mail system to the internet to
+see if we could get the email stuff to interwork and to my surprise they said well okay
+you know you can you know for a year this is just an experiment so by
+summer or so 1989 we announced we have a gateway between the mcmail system and
+the internet and as soon as we make that announcement uh all the other commercial email
+service providers which are islands into themselves right you can't talk to anybody unless you all have a account so
+things like telemail and on time compuserve yes all of those
+say wait a minute these mci guys can't have this special treatment we want on too and so the government says okay
+so they all get hooked up and two things happen the first thing that happens is they all discover that all of their
+customers who used to be trapped in a walled garden can talk to all the other customers of their competitors plus
+everybody on the internet because they were all compatible through the internet mail protocols
+and that was a little surprise and then later mail becomes almost free so much for that business model
+and but the second thing that happens about the same time maybe a little later in the years three commercial internet
+services pop up because we've just broken the aup limitation so uunet in
+virginia and psinet in virginia and surfnet in san diego all get started in 1989.
+okay and this is anecdote number whatever 17. uh surfnet used to be spelled
+s-u-r-f-net and of course you'd do that you're in san diego what else would you do so so they had a whole campaign all
+laid out t-shirts you know surf the internet and all this stuff and then a couple weeks before they actually launch
+somebody discovers that there's an organization in the netherlands called surfnet
+which is you know it's a dutch acronym and they are building a network for to connect they the
+universities in the netherlands so they can't call themselves s-u-r-f-net so
+susan estrada was the executive director of the time and so somebody says why
+don't we change our name to the california educational research foundation network
+because you know it sounds the same and then somebody says maybe we should call them in
+so they call me up and and they say can we call it surfnet and my first reaction was you know if
+they screw this up am i going to be embarrassed and i thought about it this morning wait a minute now people name their kids
+after other people and if the kids don't come out right they don't blame the people they name them
+so i said sure so i flew out to california uh
+in 1989 and we susan and i had a plastic bottle full
+of glitter and we smashed it on a cisco router and we launched the surfman
+so by that time we're starting to see real commercial services pop up
+rick adams was the founder of uunet and uh so we're talking 1989 so in 1997
+he sold the company for 2 billion to metropolitan fiber systems
+which on the same day was acquired by worldcom for 14 billion dollars
+so uh he made it out okay that that worked that was good
+so uh just you know picking a few more of these things uh the big deal after
+commercialization of course is when tim berners-lee announces the world wide web which is late december as i recall and i
+don't think too many people actually noticed he was doing it on a next machine which was very cool at cern but
+not too many people noticed and except for these two guys mark andreessen and eric biena at the national center for
+supercomputer applications in urbana-champaign and they look at the text-based
+interface and they say boy it would be really cool if we could make a more graphical interface wouldn't it so they
+do mosaic comes out around 1993 and everybody notices because suddenly
+the internet looks like a magazine with formatted text and imagery and eventually streaming audio and video
+so that was a big deal and jim clark the founder of silicon graphics
+takes one look at the mosaic browser and he says this is a big deal you know
+remember he started silicon graphics which turned out to be based on another chip that arpa funded called the
+geometry engine so he flies out and he takes mark andreessen and eric biena and maybe a few other people back
+to the west coast to start netscape communications in 1994 and by that time i had left
+bobcon's organization to rejoin mci to put them in the internet business
+and the first thing they wanted to do is build the mci mall okay so
+so i fly out to netscape and buy seven million dollars worth of licenses for
+netscape's browser and and server and the first thing i ask them to do is
+to figure out how to avoid having my servers filled with partial transactions
+that won't ever get cleared away and i won't know when to get rid of them so please store the partial transactions on the user's
+computer and so they went away and came back with cookies
+so if you're wondering where cookies come from you can blame mark no don't blame me
+so um so that you know of course they go public in 1995 the stock goes through
+the roof and the doc boom is on the venture capitalists in san francisco are throwing money at anything that looks
+like it might have something to do with the internet and this goes on for a while 1998 in the
+midst of the dot boom google gets started by sergey brin and larry page yahoo get started a little bit before
+that to surf the internet the interesting thing about the arrival of the world wide web is that it
+triggered an avalanche of content that flowed into the net it was so interesting people were not looking for
+money for the content they just wanted to know it was useful for somebody else kind of like what you do
+so this avalanche pours in and pretty soon nobody can find anything because there's so much of it so they need
+they need a search engine some of you will remember alta vista which came out of the digital
+research labs on the west coast and then yahoo comes along which was kind of more
+manual i think than some of the others were and then google of course with its clever
+strategy called pagerank which was very successful it didn't have a business model to start with by the way there was
+no business model but not very long after it got started and after they brought eric schmidt in
+as the ceo sort of adult supervision
+then this three-way business model evolved which was quite successful i can't get started in 1998 and the
+original idea was that john postell would be the chief technology officer for icann and it would manage the domain
+name system uh and ip address allocations through the regional internet registries
+um as i say john passed away in september of 98 but icann was really
+needed and so they proceeded now one thing i have not done is to tell
+you about the 1978 to 1993 protocol wars between the open systems interconnection
+model and tcpip to say nothing of x 25 and x 75 and x 29 and so on
+that would take too long so i won't do that but a lot of people imagine that this is
+just smooth sailing and it was just step by step and everything was all planned out and yet nope it was
+storm storm drang for many many years and it's still storm and drunk today
+so just pushing a little further into time here a few other things the dot bust happens in 2000s around april
+a big lesson there a lot of the startup ceos apparently didn't understand the
+difference between revenue and capital and in economics 101 says you have a
+finite amount of capital to get your revenue engine going and if you don't get the revenue engine going you will
+run out of capital and then what so lots of dead bodies uh you know of
+startups in 2000 but the internet kept going the demand for that capability was still
+very strong so youtube gets started in 2005 amazon web services comes up in 2006
+the iphone shows up i want to emphasize the iphone for a moment because all of
+you i'm sure know what a transforming event that was but now this is anecdote number 17 or 18
+i guess some of you may know that the mobile phone was invented by a guy named marty
+cooper he was working for motorola at the time what you might not know is that he
+started working on it in 1973 which is when bob and i start working on the internet and metcalf starts working
+on something going on in 73 i don't know what it was whatever we were drinking so um
+so anyway this this thing gets started in uh in the same year 73
+and it gets turned on in 1983 the same year that the internet gets turned on
+so danny cohen another name you might know was very much influential in uh in
+the internet's splitting of tcp and ip because of real-time operation he was all involved in packet
+speech among other things so danny calls me up in early 1983 and
+says come have lunch i have something to show you so i show up and he's got this thing
+sitting on the table it's about this tall it's got a whip antenna on it and it weighs about two and a half pounds
+and what's that he says it's a phone and he said well where are the wires there aren't any well how does it work so he
+says we talked about it for a while and he says i don't know the answer to that why don't you call the guy that invented
+it so i called marty cooper on a motorola brick which is what we called it then
+and the first question i asked marty was how long does the battery last and he
+says about 20 minutes but you can't hold the phone up longer than that anyway
+so so marty bless his heart you know presses on he's still around he's still
+around he's in his 90s now he's just written a book about the whole story of the invention of the mobile phone but
+the iphone is really triggering as every one of you knows when jobs figured out
+something that none of us realized that we wanted which is a device that had a camera it
+had the access to the internet it had access to the telephone system it had a touch sensitive display i mean it's got
+all these amazing features all of which existed as a technology never put together in such an
+interesting way that transforms everything because suddenly the internet is more accessible anywhere you can get
+a mobile signal you get to the internet and of course the mobile phone gets more useful because it gets access to all the
+applications that are running on the internet so the two are mutually reinforcing it's a really powerful event
+so 2007 is a big deal in the world that we now inhabit
+in 2008 2009 several developments came out of the academic
+world ethan openflow and knox this is basically software-defined networking which really has transformed the face of
+building networks today and in fact in 2010 nick mckeon and his
+colleagues started a company called nissira to build software-defined networks
+and and they were acquired by another company it's very successful there's lots more i'm not going to try to
+repeat the last 10 years of development and you've lived those last 10 years anyway so you know them as well as i do
+but they are pretty astonishing and you guys are a part of that so somebody asked me
+to look back and say what would you do differently and so i decided i put a little list
+together the first one is obvious right i would have done ipv6 first instead of ipv4
+but because it's been damn hard to take to to cause a an incompatible introduction
+of a new protocol at that low level in the architecture that in our own defense though
+we actually did a calculation when we were doing the original design of tcp
+to see how much address space we ought to have and remember it was an experiment and we didn't know if it was going to work
+so we said okay uh it has to work everywhere in the world because it's
+going to be supporting the defense department command and control system so we said okay so how many countries
+are there how many how many networks per country and we thought well how about two so there'd be some competition then
+we said how many countries are there and there wasn't any google at the time they ask so we guessed at 128 because that's
+in power of two and and you know we did the math 256 that's
+eight bits okay so we know how many networks we got to deal with 256 networks and then how many computers per
+network how about 16 million you know which is at the time there were millions of dollars and they didn't move anywhere they were
+in air conditioned rooms and they were hooked together with wires but we thought what the heck and besides it rounds it out to 32 bits which is cool
+so and we thought you know that's 4.3 billion terminations if you could if you
+could allocate them densely of course you never would but even if you could and that was more than there were people
+in the world at the time so we thought that ought to be enough for an experiment now i want you to
+imagine you know that you're a young vince surf in 1973 and and and you uh you go and
+your future self goes back and whispers in your ear and says 128 bits of address
+space and your younger self says wtf that's
+that's 3.4 times 10 to the 38th addresses and you say yeah and i don't think i can
+sell that it doesn't pass the red face test you've nev your network has never even been demonstrated and you're
+telling me you need 10 to the 38 addresses so i don't know if i would have gotten away with that now there is a huge
+mistake that i made in on for mobility support
+and this this one it's amazing how you can fool yourself into thinking to solve the problem when you actually haven't
+i remember splitting tcp in ip and then we had to figure out how the
+tcp and identifiers would work on an end end basis so we created a pseudo header
+sucking the ip addresses up out of the ip layer into the tcp layer and use that for
+socket identification and since i had an operating mobile
+radio network at the time i thought we had dealt with mobility
+except for one thing i didn't think about the possibility that your mobile would move from one network to a
+different network that had a different ip address space and at the time i was thinking okay i
+know i can put another address space at the tcp layer so that it's okay to
+switch ip out from under the tcp and those of you who know about quick know that the quick protocols establish
+a cryptographic shared variable at the upper layer at the quick layer so if and i if an ip address changes not both but
+if one of them changes you can re reconstruct uh the network if they both
+change of course they can't figure out who to talk to so that doesn't work anyway i thought that the mobile problem
+had been solved clearly it has not been solved and so that was a big mistake and i regret that but at the time i was
+patting myself on the back for saving bits in the header so you know be careful what you
+congratulate yourself for the other thing that has occurred to me is that radio has wonderful features one
+of which is broadcast you can transmit in all directions if you want to and we don't use that in any of our
+protocols in a serious way we kind of could do it especially with synchronous satellites you can imagine a
+protocol where a bunch of stuff gets sent to lots and lots of receivers and the guys that didn't get it could raise
+their hand and say please send me another copy but we never really built any protocols to take advantage of that
+maybe that's something we should think about another thing that that we
+could have done uh is put crypto into the system sooner than we did
+and a lot of people come and say you know blankety blank you idiot why didn't you put more crypto in at the beginning we wouldn't be in such a mess that we
+are today i don't actually think that's true but at the time in 1976 when whit diffy
+and marty hellman published their first paperwork on new directions and cryptography it was stunning
+and i'm sure the guys in the uk were especially stunned because they'd invented this idea in 1974 but they
+didn't but they didn't tell anybody because they didn't want anybody to know about how clever this was so anyway the
+paper gets published in uh the next year or so 78 or so
+the rsa algorithm to implement this idea gets invented now you could say why the hell didn't
+you just immediately implement the public key crypto and my reaction remember it's 1977
+i'm trying to get the damn thing demonstrated and implemented on as many operating
+systems as possible and i look at the rsa idea and i said this is retrofittable i can put this in
+anytime and so i wanted to get the system up and running and demonstrated
+first so we did that we were actually working using des which is a
+conventional symmetric key to build um a cryptographically secure
+system and we were demonstrating that with a program called black crypto red i'm sure some of you know the red side
+of the net is a sensitive side the black side is post crypto and we stuck the es in the middle
+but key distribution is not nearly as nice with the symmetric keying system as it
+is with the public key system but anyway so we were we were clearly working on on the crypto uh support
+uh and of course the nsa was busily doing some of its uh development work as
+well but i remember thinking at the time okay if i were serious about insisting
+on cryptographic implementations who are the users of this thing it's
+graduate students and i don't mean any offense because i was a graduate student once too but i can't imagine graduate
+students being really good about key management and all the other things that you have to do and so i kind of
+was comfortable not doing that and not insisting on it too early in the game
+and of course multi-factor authentication would also have been a good thing to have thought about
+if we had any technology to support it because even then everybody knew that passwords were a terrible idea
+so here we are um we really want to add
+more security into the system and so from my point of view we really need work on bgp i'm sure all of you
+know how easy it is to either be hijacked or just make a dumb mistake configuring something wrong
+almost all the really bad stuff that happens most of the time is somebody just making a mistake sometimes it's not
+somebody did it on purpose rpki is another thing that i would like to see more implementation ditto dns second
+dane so those are all things that we should be working on i also think that more strong
+authentication in the system all the way down to identifying a hunk of hardware and being able to authenticate that it
+is what you think it is would be very helpful and the internet of things really really needs something
+to keep your simple iot devices from being hijacked like the what is that half a million
+webcams that were hijacked to do the ddos attack against dyne which had
+cascade effects because dyn was doing everybody's domain name resolution for a lot of very important companies and they
+all disappeared off the net because dine fell over which by the way hang on to that thought for just a second
+because if you're like me uh you may be needing a change of underwear
+because if you think about how dependent we are on certain key
+parts of the architecture and you can see when they don't work there are cascade failures if your
+mobile doesn't work battery's dead can't get a signal some other problem
+then you can't do two-factor authentication maybe or you just can't get into your email
+so the business deal you were about to close doesn't happen i mean more than once
+even just over this weekend i had to go through a whole series of login and authentication steps some of
+which involve the mobile i now get two devices that i have to make sure work
+everybody in this room knows that the probability of success is multiple
+multiplicative so ninety percent successful times 90 successful is 81 successful if you rely
+on both things working and if there's a third thing it just gets worse so we are steering right now into a very
+fragile future in my opinion and i hope those of you who are
+thinking about software development architectures and things like that will really give some thought to making this
+more robust this isn't just a question of more security this is more resilience
+more um alternatives like every screen ought to be useful for
+this authentications if you need it things like that now some people have criticized the
+basic assumption that we made that every device on the internet should be able to talk to every other device
+and the reason that we chose that as our principle was that we didn't know which devices we're going to need to talk to
+which devices at the time and so we had no rationale for inhibiting communications now today we look back
+and realize that since everything can talk to everything then the bad guys can talk to everything and they do and they
+cause trouble so it could very well be that we should reconsider how to
+hide parties from exposure and there are some suggestions and you know the sort
+of clean sheet designs that are coming to that i've already mentioned about the dependencies so
+and i'm also very conscious of the fact that i can't even read my own watch now those
+of you who have good eyes will know that this is a ronald mcdonald watch
+and i only have 10 minutes left i got this for teaching a class in networking at hamburger university just
+outside of illinois i am not kidding there is a university they teach people how to run mcdonald's and they were
+about to network them all together so they could keep track of the sales and the use of resources and
+everything else and so they gave me a ronald mcdonald watch to commemorate
+the thing so anyway let me just riff for a second on open source and
+open standards because that's what you do and i tell you what you do is really important
+i still consider it to be one of the central engines of the evolution of the internet
+your willingness to share your code and your thoughts and your ideas and everything else it's
+wonderful think about what happened with the world wide web there was no class in being a webmaster
+but what she got to do with the browser was say show source so you can see how did they make this
+really cool web page because you could see the html and so lots and lots of people learn how to be webmasters from each other
+and that's what you do you learn from each other which is great it accelerates the pace of
+development it also open source also gives you an opportunity to find bugs now there is a
+little problem with this sometimes open source leads people to think it's open source everybody's
+already found the bugs because it's open source therefore you don't need to look yes
+you can stop laughing now so i do worry about that and i have
+pushed very hard wherever i can to argue that we need to support people like you
+more so that you can help us make more resilient and more stable and safe
+software uh it's really tough because the curation of this software is really
+important some of the bugs as some of you know have lie around for 20 years and they just don't get noticed until
+they surface at exactly the wrong time there's lots of supply chain risk factors that are involved because the
+open source software could be anywhere in the stack and could a a bug that gets in deliberately or
+malware that gets in deliberately can be really troublesome so there's a real challenge for us
+as a community to support open source software in a sustainable way so i just want you to know i'm a big fan of trying
+to find ways to do that we need this stuff the standards and the open source for interoperability
+some people say standards inhibit inter competition but i don't agree with that
+i think that having commonality and interoperability allows for competition
+on top of the standardized platform and of course we all need to remember
+that we want to adapt our software to whatever new platforms have come along kubernetes and
+containers being a very good example virtual machines and so on this is a slide which i don't have time
+to talk about but i want to just pause and ask you to look at it for a second
+because these are all problem spots and they are not
+the full list they're just some of the challenges that lie ahead
+some of them are really tricky because they involve international agreements of some kind whether it's treaties or
+norms or something else think for a minute about the world that we wish we lived in one
+where accountability is enforceable
+and that agency is given to people and companies who are using the internet
+accountability and agency and in order to make that work you may have to give up some anonymity
+because if you can't hold people you can't hold anonymous people accountable and so if they're deliberately doing
+harmful things you have to have a way of tracking them down it's a little bit like license plates it's not a perfect
+analogy but you know license plates are gobble lega except mine it says surfs up
+so most of them but most of them are just random stuff but the police department is permitted
+to penetrate the veil of uh and find out who owns the car it may not be the person who is driving the
+car but they can penetrate that veil because it's their job to hold people accountable so i think you
+should think a little bit about that and the other one the thing that the last two bullets especially i want
+to say straight to you that getting rid of bugs is really important
+making mistakes is easy in the software world we do dumb things you know like
+buffer overflows or off by one bugs or hey we just we just
+read a variable and did a compare and a branch on it except nobody ever set the variable so it's a random number
+it gives you really predictable behavior so there's an ethical component here
+every one of us who writes software has an ethical responsibility to do the best
+we can to make it safe and secure and and reliable
+now in all fairness the programming environments that we have
+are not exactly helpful in that endeavor i was going to say suck but you know
+but this is a challenge to the academics especially to figure out how to design and build
+programming environments that actually alert us to the dumb mistakes that we might make
+so i think this is the last slide final thoughts and i am happy to do some q a
+if you have any so first of all we have huge challenges to keep the internet open safe secure
+sustainable reliable and connected and the reason that this is a big challenge is that governments around the
+world recognizing that there are problems in the online world or harms are being committed against
+corporations and and people and they want to do something about it now some governments are trying
+to protect the government other governments are trying to protect the citizens but it's a big challenge when the
+governments are trying to enact laws that aren't necessarily implementable from the technical point of view
+we so we're faced with trying to preserve the value of this connected internet while we're protecting people from
+harm i also think that your work in open source is important for digital preservation i want you to imagine you
+have a lot of digital stuff and you want it to last so that your great grandchildren can have access to
+it well you know when you have digitized anything you need software to help interpret it most of the time what if
+it's a spreadsheet or a photograph if you don't if you can't run the code that created the digital object 100 years
+from now then it may not be available so we have a huge challenge in maintaining the accessibility of digital objects
+over long periods of time there's something ironic about this there are clay tablets
+in cuneiform that were written 4 000 or more years ago and if you can read
+cuneiform which maybe three or four people in the world can you can still read that clay tablet because it was a
+warehouse receipt and the warehouse burned down and the tablet was baked and that gave it longevity
+then there's uh vellum sheepskin calfskin and that stuff lasts easy a thousand
+years if you keep going forward to recording media and then you get to five and a quarter
+inch floppy's three and a half inch floppy cd roms and they last for you know one two three four five six you know
+maybe 10 maybe 15 years how about seven track tape
+nine track tape so we have a big problem and that's preserving our digital future and that
+is going to mean that old software needs to keep running somehow interpreters uh emulators all
+those sorts of things uh so we really need to do that and the second to the last bullet talks about
+accessibility and by this i mean making software accessible to people with disabilities i wear hearing aids and
+i've worn them for about 65 or 70 years but there are people who have all kinds of vision problems and motor problems
+and everything else and they often get the short end of the stick when it comes to accessibility
+it's hard to do that it's not falling off a log you really have to think about how am i going to make this application
+work for somebody who can't see or can't hear or doesn't have fine-grained motor control or some other problem
+but figuring out how to do that is worthwhile because we're losing out on talents of people
+just because you can't see doesn't mean your brain doesn't work and finally making open source
+sustainable and trustworthy is the task beholding to you so i apologize that i didn't leave any
+time unless you want to stick around for a bit for q a but i really thank you for listening and i thank you for what
+you're doing
+thank you thank you so i am confident that a few people will
+take your offer up for a q a okay um as long as you're as as it was as it was a
+genuine offer and you're ready to spend a few more minutes with us um and it seems like it was so i think uh
+hannah you are somewhere in the room with a microphone if you would like to ask a question of of dr surf please
+yeah let me let me warn you that if i have trouble hearing the question don't shout that doesn't help it's just a
+matter of clarity but the nice lady with the microphone is wandering in the uh aisles
+yep
+with the microphone but but if everybody's wearing a mask it doesn't do any good because you can't lip-read
+through the mask speaking of masks so not so much a
+technical question but having done all of this and like your life story what's next
+oh well i didn't tell you about the project that started in 1998 at the jet propulsion laboratory
+uh just after the pathfinder landed in 1997 after 20 years of failure to get to
+the mars remember the two vikings in 76 and then nothing works 97 this little overland successfully
+everybody cheers so i show up at jpl uh the next spring
+and i get together with the team that did the comms for uh for the pathfinder and we spend about you know a couple of
+days together and we're trying to figure out what should we be doing now that is to say 1998 that's going to be needed 25
+years from now and we said okay we want an interplanetary backbone network
+so we started working on the design of the solar system internet we are now at the point where we have
+new protocols that have been standardized by ietf and the consultative committee on space data
+systems we are running on the international space station have been there for a decade
+we've done deep space tests with some of the nasa spacecraft that have visited comments
+and things like that we are prepared to go to the moon with the artemis mission there's a luna net
+design that goddard space flight center is working we are working together with issa and
+jaxa and carrie as well and and of course nasa
+so this this is all coming together there is a group if you want to look uh closely it's ipn interplanetary network
+ipn sig special interest group ipnig.org is a chapter of the internet
+society so we are we're located nowhere on earth
+we are in in the rest of the solar system i've been trying to trying to get jpl
+they issue me a badge that says resident alien
+which should be really cool fun fact the several of the folks that um are running rav here today are are
+involved in some of the some of the fun uh and exciting missions at nasa jpl so
+um thank you all for for running those cameras that are letting us uh share this talk on the internet um
+so we've got one more question in the back yeah so there was a point on the previous
+slide talking about uh accountability and uh you know trace accountability and traceability or
+something of that sort right um and it's talking about how we wanted to uh to have to make sure that people were
+behaving well um and to protect you know corporations governments and individuals from these
+bad actors uh a better question from my perspective is how do we protect ourselves from government bad actors also very good
+question and again interestingly enough accountability makes sense in that context too because
+we would expect governments to be accountable for what they've done not all governments are willing to be
+accountable you and i would probably agree on that but if we establish a practice of accountability and we insist
+that that's part of the architecture and design then at least we have a shot at it i
+would not stand here and say i promise or guarantee that that will work but i believe that
+we should hold ourselves to the philosophy that people should be accountable and government should be
+accountable for what they do and of course one way to do that is to vote
+[Applause]
+hi so um it's starting to look like with the rise of vr technology and ar that we're going
+to be in a lot more of virtual worlds but we're having a lot of problems just deciding on what standards to use and
+even the underlying communications technologies do you have any advice tips tricks that we could
+possibly use while creating these so yeah remember i probably don't have any
+better idea than you do so be you know be careful whatever i say you should take with a grain of salt
+i had the impression that there were some really interesting ideas a while back remember second life and vrml
+now i don't know vrml intimately so i could be saying look at that thing and you would say i looked at it in this
+pile of crap but but there have been attempts to
+find ways of sharing the descriptions of multi-dimensional spaces
+i think we're going to have to experiment with this a lot here's the one thing i'm hoping for
+lots of people are going to try 3d stuff because it's all very exciting we got chipsets that can do it and we've got
+headsets oh that reminds me this is going to be weird you know we've been spending the last
+two years doing the video conferencing with zoom and google meat and all these other things and people are saying yeah
+i can hardly wait to do this with the 3d you know headsets and i'm sitting here thinking how's that going to look
+yeah because you got the camera here but you're wearing this thing and so you look like darth vader in fact
+we all look like darth vader and so in order to do this 3d conferencing you're going to have to have an avatar
+which means it's a new business model right you know you can have i my avatar can have hair for example
+and and you know you rent suits from uh you know ralph lauren uh i think we're a long ways from
+getting this right the one thing i will notice is that the headsets have got to the point where there is less
+problem you know people get nauseated because they get signals
+proprioceptive signaling is not a great 50 cent word pro the proprioceptive
+signaling doesn't match your eyes are telling you you're going like this and your body says you're standing here like that and your brain says this doesn't
+make any sense and so so then it makes you throw up which is you know thanks a lot so
+so i think we still have a ways to go but it's getting better but i think there's a whole ecosystem
+waiting and a lot of design and standardization i would love it if it turns out that those
+three-dimensional environments could interwork somehow but that would require a lot of agreement and cooperation
+and commonality of you know headset capability and coding and everything else
+so guess what you get to try that out it's going to be cool
+we got one one more here hannah uh it's up in front and then and then one on the side
+well you can yell but we want other people to hear you too so
+um so you mentioned supply chain issues yeah and um uh specifically provenance software
+providence um do you have any thoughts on systems like nyx uh gwix or um
+have you heard of any of that those are not familiar so if you want to say a little more about what they are
+supposed to do is that um well nick's is about um reproducible build systems all the
+way to the executable okay so essentially your hash is part of the binary execution yes
+got it so i like that a lot i mean i like the fact that it's that you can't make alterations without there being
+visible you can make the alterations but if you check first there are a lot of hardware boot systems do that right
+so i'm a big fan of that sort of thing it's another example of trying to make sure that the devices are equipped with
+the ability to figure out where did this stuff come from has it maintained integrity on its
+journey before i actually load it in and boot it up so i like that idea a lot
+i think we have one other question over there and then we need to wrap up no problem so thank you thank you for uh answering my question this uh this is actually uh confirming an anecdote that professor douglas comer told our class on the construction of the ip protocol when in discussions with the dod and that one of them thing was riding around a city that has been destroyed by nuclear war and i was wondering if you could confirm or deny any of that right okay so there's great confusion in the history here paul barron when he was at rand corporation 1962-64 published an 11 volume series called undistributed communication he was talking about mesh networks this is 62. mesh networks and packetized didn't call it that call it message blocks for digital speech he imagined routers he didn't call them routers either relays on the tops of telephone poles across the country and so this big mesh could you could blow holes in it as long as there was some connectivity stuff would get through used hot potato routing which basically was send it to everybody and you know try to get it try to get it you know to the destination so that was his model and uh never got built but it was published then um arpanet comes along now the arpanet was driven by an economic requirement arpa was spending money on a dozen universities to do artificial intelligence and computer science research in the 1960s and every year everybody said you have to buy us a new brand new world-class computer so we can keep doing world-class research and arpa said we can't afford that so they said we're going to build a network and you can share and everybody hated that but they said we're going don't don't worry we are going to fund all of you so you don't have to hide your results in order to have an edge on next year's proposals we want you to share your results share your software and share your computing capability so we can accelerate the pace of artificial intelligence and computer science so they think in fact did build the network but it was not based on nuclear holocaust or anything it was just based on trying out a packet switching technology which we believed at the time would work a lot better than dial up a computer send some data hang up dial up another computer send some data and hang up we didn't think circuit switching was going to work for our bursty kind of applications of course the telecom canon of the day was of course you do circuit switching that's how we've been doing it for 100 and whatever it was 70 years or 50 years and so we asked a t and t would you like to participate in this thing they say no it won't work but we'll sell you dedicated circuits if you like so so you can build your stupid network and and and so they did and we did and it worked so so now when the internet comes along i was worried about exactly the problem of recovery from major failures but and we even did an experiment to figure out what happens if you had a partition network radio perlman figured out how to do the routing system to recover from a perforated or a bifurcated network but all in all honesty none of those protocols were ever tested in the kind of nuclear holocaust that really blew a lot of pieces apart i actually did however just to demonstrate it uh fly packet radios in the strategic air command bombers and and perfume that basically cut up pieces of the arpanet and then glued them back together using ground and air based mobile packet radios just to demonstrate that tcp would link the pieces back together again but it wouldn't it would that it was not mature enough to deal with a serious post-nuclear scenario so the real answer is none of this was really built to do that it was built to figure out how to get computers to talk to each other okay got to wrap it up but thanks again we really appreciate the opportunity
+[Applause]
+thank you for joining us and and for for sharing with us um and and for helping to uh you know be part of creating many of our careers so um so with that scale is officially over uh at least for those of you that are attendees for those of us that are wearing orange shirts and jerseys and and other embroidered materials we have a couple more hours of four days of clean up and wrap up um if you want to make that easier for us next year we are always looking for additional volunteers and team members um but with that uh we will see you again march 9th through the 12th in pasadena it's only about six months away um which i think just i think i just scared my team quite a bit nine months away they're like they didn't want me to steal three months um you can be part of that make this make this journey easier for the rest of us thank you very much
+
